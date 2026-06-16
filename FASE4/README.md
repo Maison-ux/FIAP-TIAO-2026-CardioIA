@@ -1,92 +1,169 @@
-# CardioIA – Fase 4
+<div align="center">
 
-## Assistente Cardiológico Virtual com Visão Computacional
+# FIAP - Faculdade de Informática e Administração Paulista
 
-### Objetivo
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Logo_FIAP.png" width="250">
 
-Esta fase do projeto CardioIA tem como objetivo aplicar técnicas de Inteligência Artificial e Visão Computacional para auxiliar na análise de dados relacionados ao monitoramento cardíaco.
+# CardioIA – Assistente Cardiológico Virtual com Visão Computacional
 
-O foco principal foi o pré-processamento dos dados, preparação do conjunto de treinamento e geração de um modelo de aprendizado de máquina capaz de auxiliar na identificação de padrões relevantes para suporte à tomada de decisão clínica.
+## Fase 4 – Superando Limites: Era da Mobilidade e Visão Inteligente
+
+</div>
 
 ---
 
-## Estrutura da Fase
+## Integrante
 
-```text
-FASE4/
-├── data/
-├── src/
-├── README.md
+- Maison Wendrel Bezerra Ramos
+
+## Turma
+
+- TIAO 2026
+
+## Grupo
+
+- Grupo 76
+
+## Professor
+
+- (Preencher)
+
+## Tutor
+
+- (Preencher)
+
+---
+
+# Objetivo do Projeto
+
+Desenvolver uma solução baseada em Inteligência Artificial e Visão Computacional para auxiliar na análise de imagens médicas simuladas relacionadas ao contexto cardiológico.
+
+O projeto contempla:
+
+- Pré-processamento de imagens
+- Treinamento de Redes Neurais Convolucionais (CNN)
+- Avaliação de desempenho
+- Geração de previsões
+- Apoio à tomada de decisão clínica
+
+---
+
+# Dataset Utilizado
+
+Foi utilizado um dataset público de imagens médicas para experimentação e treinamento dos modelos de aprendizado profundo.
+
+Devido às limitações de armazenamento do GitHub, o dataset original não foi incluído neste repositório.
+
+A documentação referente ao dataset encontra-se em:
+
+```
+FASE4/data/README_DATASET.md
 ```
 
-### data/
+---
 
-Contém informações relacionadas ao conjunto de dados utilizado no treinamento do modelo.
+# Estrutura do Projeto
 
-### src/
-
-Contém o notebook principal do projeto e a documentação referente ao modelo treinado.
+```
+FASE4
+│
+├── data
+│   └── README_DATASET.md
+│
+├── src
+│   ├── CardioIA_Fase4_Preprocessamento_FINAL.ipynb
+│   └── README_MODELO.md
+│
+└── README.md
+```
 
 ---
 
-## Notebook Entregue
+# Pipeline de Pré-processamento
 
-Arquivo:
+As etapas realizadas foram:
 
-```text
+1. Carregamento das imagens
+2. Redimensionamento
+3. Normalização dos pixels
+4. Organização das classes
+5. Separação entre treino, validação e teste
+6. Preparação dos lotes para treinamento
+
+---
+
+# Modelo CNN
+
+Foi implementada uma Rede Neural Convolucional para classificação das imagens médicas.
+
+Etapas:
+
+- Camadas convolucionais
+- Pooling
+- Flatten
+- Camadas densas
+- Função Softmax
+- Treinamento supervisionado
+
+---
+
+# Métricas Avaliadas
+
+Foram utilizadas métricas estudadas durante a disciplina:
+
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- Matriz de Confusão
+
+---
+
+# Resultados
+
+O modelo apresentou capacidade de identificar padrões nas imagens processadas, demonstrando a aplicação prática de técnicas de Visão Computacional no contexto da saúde.
+
+Os resultados detalhados podem ser visualizados diretamente no notebook:
+
+```
 CardioIA_Fase4_Preprocessamento_FINAL.ipynb
 ```
 
-O notebook contempla:
+---
 
-* carregamento dos dados
-* limpeza dos dados
-* tratamento de valores ausentes
-* preparação para treinamento
-* treinamento do modelo
-* avaliação dos resultados
-* exportação do modelo treinado
+# Protótipo
+
+O notebook atua como protótipo funcional para demonstração do processo de classificação das imagens.
+
+Funcionalidades:
+
+- Pré-processamento
+- Treinamento
+- Avaliação
+- Predição
 
 ---
 
-## Modelo Treinado
+# Tecnologias Utilizadas
 
-O modelo gerado durante o treinamento foi salvo no formato:
-
-```text
-modelo_cardioia_fase4.h5
-```
-
-Devido ao limite de 100 MB imposto pelo GitHub para arquivos individuais, o modelo não foi incluído no repositório.
-
-As instruções e informações referentes ao modelo encontram-se em:
-
-```text
-src/README_MODELO.md
-```
+- Python
+- TensorFlow
+- Keras
+- NumPy
+- Pandas
+- Matplotlib
+- Google Colab
 
 ---
 
-## Tecnologias Utilizadas
+# Repositório GitHub
 
-* Python
-* Jupyter Notebook
-* TensorFlow / Keras
-* Pandas
-* NumPy
-* Scikit-Learn
+GitHub:
+
+https://github.com/Maison-ux/FIAP-TIAO-2026-CardioIA
 
 ---
 
-## Integrantes
+# Licença
 
-* Maison Wendrel Bezerra Ramos – RM 565616
-* Italo Domingues – RM 561787
-
----
-
-## Instituição
-
-FIAP – Inteligência Artificial
-
-Projeto desenvolvido para a atividade avaliativa da Fase 4 – Assistente Cardiológico Virtual com Visão Computacional.
+Projeto desenvolvido exclusivamente para fins acadêmicos na FIAP.
