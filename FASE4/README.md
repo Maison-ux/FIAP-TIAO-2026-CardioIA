@@ -1,202 +1,267 @@
 # ❤️ CardioIA – Fase 4
-
-## Assistente Cardiológico Virtual com Visão Computacional
-
-<div align="center">
-
-# FIAP
-
-## Faculdade de Informática e Administração Paulista
-
-### FASE 4 – Superando Limites: Era da Mobilidade e Visão Inteligente
-
-</div>
+## Classificação de Arritmias Cardíacas com Redes Neurais Convolucionais (CNN)
 
 ---
 
-# 👥 Integrantes
+## 👨‍💻 Integrantes
 
-* Maison Wendrel Bezerra Ramos – RM 565616
-* Italo Domingues – RM 561787
+- Maison Wendrel Bezerra Ramos – RM: 565616
+- Ítalo Domingues – RM: 561787
 
 ---
 
-# 👨‍🏫 Professores
+## 👨‍🏫 Professores
 
-## Tutor(a)
+### Tutor(a)
 
-* Caique Nonato da Silva Bezerra
+- Caique Nonato da Silva Bezerra
 
-## Coordenador(a)
+### Coordenador(a)
 
-* André Godoi Chiovato
+- André Godoi Chiovato
 
 ---
 
 # 📌 Descrição do Projeto
 
-O CardioIA é uma iniciativa acadêmica desenvolvida ao longo das fases do projeto FIAP com o objetivo de aplicar Inteligência Artificial em cenários relacionados à saúde cardiovascular.
+O CardioIA é uma solução baseada em Inteligência Artificial voltada para a identificação e classificação automática de arritmias cardíacas através de imagens de eletrocardiogramas (ECG).
 
-Nesta Fase 4, o foco está na utilização de técnicas de Visão Computacional para realizar o processamento e a classificação de imagens médicas simuladas, permitindo a identificação automatizada de padrões relevantes para apoio à tomada de decisão clínica.
+Nesta Fase 4 foi desenvolvido um pipeline completo de Visão Computacional utilizando Redes Neurais Convolucionais (CNN), permitindo que imagens de ECG sejam classificadas em seis categorias distintas de batimentos cardíacos.
 
-O projeto demonstra na prática a aplicação de Redes Neurais Convolucionais (CNNs), técnicas de pré-processamento de imagens e análise de métricas de desempenho amplamente utilizadas em projetos de Inteligência Artificial voltados para a área da saúde.
-
----
-
-# 🎯 Objetivos da Fase 4
-
-* Realizar o pré-processamento das imagens utilizadas no treinamento.
-* Construir e treinar uma Rede Neural Convolucional (CNN).
-* Avaliar o desempenho do modelo utilizando métricas apropriadas.
-* Demonstrar a classificação das imagens por meio de um protótipo funcional.
-* Aplicar conceitos de Visão Computacional estudados durante a disciplina.
+O objetivo é demonstrar como técnicas modernas de Deep Learning podem auxiliar profissionais da saúde na análise rápida e eficiente de sinais cardíacos.
 
 ---
 
-# 📂 Estrutura do Projeto
+# 🎯 Objetivos
 
-```text
-FASE4
+- Aplicar técnicas de Visão Computacional em imagens médicas.
+- Construir uma CNN para classificação de arritmias.
+- Avaliar o desempenho do modelo utilizando métricas de Machine Learning.
+- Identificar possíveis problemas de viés e desbalanceamento do conjunto de dados.
+- Demonstrar a aplicação prática da Inteligência Artificial na área da saúde.
+
+---
+
+# 🗂 Estrutura do Projeto
+
+```bash
+FASE4/
 │
-├── data
-│   └── README_DATASET.md
+├── data/
+│   ├── train/
+│   └── test/
 │
-├── src
-│   ├── CardioIA_Fase4_Preprocessamento_FINAL.ipynb
-│   └── README_MODELO.md
+├── src/
+│   └── CardioIA_Fase4_Preprocessamento_FINAL.ipynb
 │
 └── README.md
 ```
 
-# 🔍 Pipeline de Pré-processamento
+---
+
+# 📊 Dataset Utilizado
+
+O projeto utiliza imagens de ECG organizadas em seis classes:
+
+| Classe | Descrição |
+|----------|------------|
+| F | Fusion Beat |
+| M | Myocardial Infarction |
+| N | Normal Beat |
+| Q | Unknown Beat |
+| S | Supraventricular Beat |
+| V | Ventricular Beat |
+
+---
+
+# 📈 Distribuição das Classes (Treino)
+
+| Classe | Quantidade |
+|----------|------------:|
+| F | 642 |
+| M | 8.405 |
+| N | 75.709 |
+| Q | 6.431 |
+| S | 2.223 |
+| V | 5.789 |
+
+Observa-se forte desbalanceamento entre as classes, especialmente na classe N (Normal), que representa a maior parte do conjunto de treinamento.
+
+---
+
+# ⚙️ Pré-processamento
 
 As imagens passaram pelas seguintes etapas:
 
-1. Carregamento do dataset.
-2. Redimensionamento das imagens.
-3. Normalização dos pixels.
-4. Organização das classes.
-5. Separação em conjuntos de treino, validação e teste.
-6. Preparação dos dados para treinamento da CNN.
+- Redimensionamento para 224x224 pixels
+- Normalização dos pixels (0–1)
+- Separação automática entre treino e validação
+- Organização em batches para treinamento
 
----
+Configuração utilizada:
 
-# 🧠 Rede Neural Convolucional (CNN)
-
-O modelo desenvolvido utiliza conceitos de Deep Learning aplicados à Visão Computacional.
-
-Etapas principais:
-
-* Camadas convolucionais.
-* Funções de ativação.
-* Pooling.
-* Flatten.
-* Camadas densas.
-* Classificação supervisionada.
-
-O treinamento foi realizado utilizando Python e TensorFlow/Keras no ambiente Google Colab.
-
----
-
-# 📊 Avaliação do Modelo
-
-As métricas utilizadas para avaliação foram:
-
-* Accuracy (Acurácia)
-* Precision (Precisão)
-* Recall
-* F1-Score
-* Matriz de Confusão
-
-Os resultados completos podem ser consultados diretamente no notebook disponibilizado no repositório.
-
----
-
-# 💻 Tecnologias Utilizadas
-
-* Python
-* TensorFlow
-* Keras
-* NumPy
-* Pandas
-* Matplotlib
-* Scikit-Learn
-* Google Colab
-* GitHub
-
----
-
-# 📁 Dataset
-
-O dataset utilizado para treinamento e testes não foi incluído neste repositório devido às limitações de armazenamento do GitHub.
-
-As informações referentes ao conjunto de dados encontram-se em:
-
-```text
-FASE4/data/README_DATASET.md
+```python
+IMG_HEIGHT = 224
+IMG_WIDTH = 224
+BATCH_SIZE = 32
 ```
 
 ---
 
-# 🚀 Execução
+# 🧠 Arquitetura da CNN
 
-1. Abrir o notebook:
+A rede neural foi composta por:
 
-```text
-FASE4/src/CardioIA_Fase4_Preprocessamento_FINAL.ipynb
+### Bloco 1
+
+```python
+Conv2D(32)
+MaxPooling2D()
 ```
 
-2. Executar as células na sequência.
+### Bloco 2
 
-3. Acompanhar:
+```python
+Conv2D(64)
+MaxPooling2D()
+```
 
-* Pré-processamento
-* Treinamento
-* Avaliação
-* Predições
+### Bloco 3
 
----
+```python
+Conv2D(128)
+MaxPooling2D()
+```
 
-# 📷 Evidências
+### Classificador
 
-Adicionar nesta seção:
-
-* Prints do pré-processamento.
-* Prints do treinamento.
-* Prints das métricas.
-* Prints da matriz de confusão.
-* Prints das classificações realizadas.
-
----
-
-# 🎥 Vídeo de Demonstração
-
-Inserir o link do vídeo após a gravação:
-
-```text
-[LINK DO VÍDEO]
+```python
+Flatten()
+Dense(128, activation='relu')
+Dropout(0.5)
+Dense(6, activation='softmax')
 ```
 
 ---
 
-# 📄 Relatório
+# 📋 Resumo do Modelo
 
-Inserir o link para o relatório PDF:
+| Métrica | Valor |
+|----------|--------:|
+| Total de parâmetros | 11.169.734 |
+| Parâmetros treináveis | 11.169.734 |
+| Classes | 6 |
+| Batch Size | 32 |
+| Épocas | 10 |
+
+---
+
+# 📊 Divisão dos Dados
+
+| Conjunto | Quantidade |
+|------------|-----------:|
+| Treino | 79.362 |
+| Validação | 19.837 |
+| Teste | 24.791 |
+
+---
+
+# 🚀 Resultados Obtidos
+
+## Accuracy
 
 ```text
-https://doc-0s-b0-docstext.googleusercontent.com/export/mvsmsl4i9lhdsiepml8p5ru288/fu8esd437jhsf0paeucjudf5oo/1781643895000/107627523405490861081/107627523405490861081/1M24W0JnpYygNAkZ1Za0_qErEbxdMmL4AOeUCErrKEBg?format=pdf&id=1M24W0JnpYygNAkZ1Za0_qErEbxdMmL4AOeUCErrKEBg&token=ABg6iWQo8L8exODhdt77RATbZDpd:1781643708578&ouid=107627523405490861081&includes_info_params=true&usp=docs_home&cros_files=false&nded=false&tab=t.0&inspectorResult=%7B%22pc%22:3,%22lplc%22:13%7D&dat=AP8AcFpwjJs0mNozNnS5jrLTU_pzfb_-3kpdSyE5uGfjbvXi_7vFAIuzYZ28_yVNughLwIC1M-xm_DpefUTS-XMS3EdVaP3YtcOElwXfNqevzOvFRAS-TO4tb-NPi1mneHFXN7R1x93zsHS9SPRan9AjQ3ZfT_ebYXmq_wGOqh1ccQswsDEAlsdt9uN4DaUm-42fl8rCBPNKetd8MmdDgoyfktjHq0bRckTHWznVXjEj12-lY5-CwsrlhMjDX7ajRSPv4SA7q8K6ayaE_e2YiO1SvmWDMeTYyVdoc3q-tlAVgBG4pwmB9xrgNBZyf0bqwsHhRe2YcEMurVX2DSCKAb-mxq-GgSuIWTGuQ8uocLw2HhvVBPz2OcTdMvCrxzjwFKyGdJ3WzxcKahCIOk2VdLbiIJlX7ip_gggh6NqQ66_yhxMhrmxZgxQbRXq9Ac8OwoDqVWrijt7KITb9DpXilhWsUNISWigTRGvbyDYAeKchg0OBb4x6LBl4EsbeOYpaL-XxvGLOaTp1APN7b-40WrHuYpdYaPCnIUh7O6Q6cn657_JcCy5r-e_aZXr6ooia-DU6447cMNzgLtMwUbJG3FVmKgIRl9lvR1Zhtm5-gPDDiEOC3M0QuuIN4VZSM37LEPk3A4fKztJl7XaNFj4AIkRnP9bPsPfjWa273tvm0FR-PUO8UvZg3TH02-Z-E5QeTMYlw55avfBwA7ZlaPUxhNbI9ZRXH66J2XN1Ol4OjYnpIM8nx5ICthnbarEjl5lxLXUc8lA00bB9ZzxJOgn844TTKN8QA_c27F_qOyaQ10kFw2PY9hXMbBMYiXUSTpmWT6UGMlsxBH4d-NwgaSzxOGmGrR1prLHLg7X4ZfU6vPDqMSyKBmhqD1Gka4Vk-p2FuGDJgih2vN3-el9r80t51QRqYW5wbRt8Fe3Xe2FrCK7E6eIZ
+Accuracy: 1.0
+```
+
+## Loss
+
+```text
+Loss: 2.64e-10
 ```
 
 ---
 
-# 🔗 Repositório GitHub
+# 📈 Relatório de Classificação
 
-https://github.com/Maison-ux/FIAP-TIAO-2026-CardioIA
+| Classe | Precision | Recall | F1-Score |
+|----------|-----------|--------|----------|
+| F | 1.00 | 1.00 | 1.00 |
+| M | 1.00 | 1.00 | 1.00 |
+| N | 1.00 | 1.00 | 1.00 |
+| Q | 1.00 | 1.00 | 1.00 |
+| S | 1.00 | 1.00 | 1.00 |
+| V | 1.00 | 1.00 | 1.00 |
+
+Accuracy Geral:
+
+```text
+100%
+```
 
 ---
 
-# 📜 Licença
+# 📉 Matriz de Confusão
 
-Projeto desenvolvido exclusivamente para fins acadêmicos como atividade da FIAP.
+A matriz de confusão apresentou classificação perfeita para todas as categorias analisadas.
 
-Não destinado para utilização clínica ou comercial.
+Não foram observados falsos positivos ou falsos negativos no conjunto de teste utilizado.
+
+---
+
+# ⚠️ Discussão Ética e Limitações
+
+Apesar dos excelentes resultados obtidos, alguns pontos devem ser considerados:
+
+### Desbalanceamento de Classes
+
+A classe N (Normal) possui quantidade significativamente maior de exemplos quando comparada às demais classes.
+
+Isso pode gerar:
+
+- Tendência do modelo a favorecer a classe majoritária.
+- Menor generalização em cenários reais.
+- Possíveis vieses em populações diferentes das presentes no dataset.
+
+### Ambiente Controlado
+
+O modelo foi treinado em um conjunto de dados previamente organizado e limpo.
+
+Em ambientes clínicos reais podem existir:
+
+- Ruídos nos sinais.
+- Artefatos de captura.
+- Equipamentos diferentes.
+- Pacientes com características distintas.
+
+Portanto, antes de aplicação clínica real, seriam necessários novos testes, validações externas e aprovação regulatória.
+
+---
+
+# 🛠 Tecnologias Utilizadas
+
+- Python
+- TensorFlow
+- Keras
+- NumPy
+- Matplotlib
+- Scikit-Learn
+- Google Colab
+
+---
+
+# 📚 Conclusão
+
+O projeto CardioIA Fase 4 demonstrou a viabilidade do uso de Redes Neurais Convolucionais para classificação automática de arritmias cardíacas a partir de imagens de ECG.
+
+Os resultados obtidos evidenciam o potencial da Inteligência Artificial para auxiliar profissionais da saúde em tarefas de apoio diagnóstico, contribuindo para maior rapidez e eficiência na análise de exames cardíacos.
+
+---
+
+## 🔗 Repositório
+
+GitHub:
+
+https://github.com/Maison-ux
+
+---
