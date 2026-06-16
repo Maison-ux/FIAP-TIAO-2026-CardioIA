@@ -74,6 +74,27 @@ O projeto utiliza imagens de ECG organizadas em seis classes:
 
 ---
 
+# 📚 Fonte dos Dados
+
+O conjunto de dados utilizado neste projeto foi obtido através da plataforma Kaggle.
+
+Dataset:
+ECG Heartbeat Categorization Dataset
+
+Fonte:
+https://www.kaggle.com/datasets/shayanfazeli/heartbeat
+
+O dataset é derivado da base MIT-BIH Arrhythmia Database, amplamente utilizada em pesquisas acadêmicas para detecção e classificação de arritmias cardíacas.
+
+Classes utilizadas:
+
+- N (Normal Beat)
+- S (Supraventricular Beat)
+- V (Ventricular Beat)
+- F (Fusion Beat)
+- Q (Unknown Beat)
+- M (Myocardial Infarction)
+
 # 📈 Distribuição das Classes (Treino)
 
 | Classe | Quantidade |
@@ -265,3 +286,16 @@ GitHub:
 https://github.com/Maison-ux
 
 ---
+# 📖 Referências
+
+1. Kaggle - ECG Heartbeat Categorization Dataset
+   https://www.kaggle.com/datasets/shayanfazeli/heartbeat
+
+2. MIT-BIH Arrhythmia Database
+   https://physionet.org/content/mitdb/
+
+3. TensorFlow Documentation
+   https://www.tensorflow.org/
+
+4. Scikit-Learn Documentation
+   https://scikit-learn.org/
