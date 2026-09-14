@@ -1,11 +1,5 @@
 [
     {
-        "tipo": "teste",
-        "origem": "CardioIA",
-        "mensagem": "Banco NoSQL funcionando",
-        "data_hora": "2026-09-14T12:49:35.248249"
-    },
-    {
         "tipo": "analise_clinica",
         "origem": "CardioIA_RPA",
         "paciente": 1,
@@ -19,23 +13,16 @@
     {
         "tipo": "analise_clinica",
         "origem": "CardioIA_RPA",
-        "paciente": 1,
-        "pressao": "120.0/80.0",
-        "frequencia_cardiaca": 72.0,
-        "adesao": 95.0,
-        "status": "NORMAL",
-        "alertas": [],
-        "data_hora": "2026-09-14T13:13:46.069752"
-    },
-    {
-        "tipo": "analise_clinica",
-        "origem": "CardioIA_RPA",
-        "paciente": 1,
-        "pressao": "120.0/80.0",
-        "frequencia_cardiaca": 72.0,
-        "adesao": 95.0,
-        "status": "NORMAL",
-        "alertas": [],
-        "data_hora": "2026-09-14T13:19:24.111291"
+        "paciente": 2,
+        "pressao": "150.0/95.0",
+        "frequencia_cardiaca": 110.0,
+        "adesao": 70.0,
+        "status": "ATENÇÃO",
+        "alertas": [
+            "Frequência cardíaca elevada",
+            "Pressão arterial elevada",
+            "Baixa adesão ao tratamento"
+        ],
+        "data_hora": "2026-09-14T16:23:32.305655"
     }
 ]
