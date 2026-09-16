@@ -1,4 +1,3 @@
-@"
 # CardioIA — Fase 5
 ## Assistente Cardiológico Inteligente: Experiência do Paciente
 
@@ -500,4 +499,3 @@ relacionais e não relacionais.
 
 Os componentes implementados possuem testes automatizados e documentação
 correspondente, permitindo a reprodução do projeto em ambiente local.
-"@ | Set-Content -Encoding UTF8 .\docs\README_FASE5.md
