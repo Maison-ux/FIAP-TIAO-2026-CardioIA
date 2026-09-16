@@ -1,0 +1,12 @@
+{
+    "sintomas": [
+        "palpitações"
+    ],
+    "pressao_arterial": "150/95 mmHg",
+    "frequencia_cardiaca": "110 bpm",
+    "duracao": "aproximadamente 30 minutos",
+    "medicamentos": [
+        "medicamento para pressão"
+    ],
+    "observacoes": null
+}
