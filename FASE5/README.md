@@ -1,4 +1,4 @@
-@'
+
 # ❤️ CardioIA
 ## Projeto FIAP – Inteligência Artificial
 
