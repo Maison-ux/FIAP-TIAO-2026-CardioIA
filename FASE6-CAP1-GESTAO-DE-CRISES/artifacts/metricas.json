@@ -1,0 +1,100 @@
+{
+  "seed": 42,
+  "n": 5000,
+  "split": {
+    "treino": 3500,
+    "validacao": 750,
+    "teste": 750
+  },
+  "distribuicao_classes": {
+    "0": 3671,
+    "1": 1329
+  },
+  "validacao": {
+    "accuracy": 0.9973333333333333,
+    "precision": 1.0,
+    "recall": 0.99,
+    "f1": 0.9949748743718593,
+    "confusion_matrix": [
+      [
+        550,
+        0
+      ],
+      [
+        2,
+        198
+      ]
+    ],
+    "report": {
+      "0": {
+        "precision": 0.9963768115942029,
+        "recall": 1.0,
+        "f1-score": 0.9981851179673321,
+        "support": 550.0
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 0.99,
+        "f1-score": 0.9949748743718593,
+        "support": 200.0
+      },
+      "accuracy": 0.9973333333333333,
+      "macro avg": {
+        "precision": 0.9981884057971014,
+        "recall": 0.995,
+        "f1-score": 0.9965799961695957,
+        "support": 750.0
+      },
+      "weighted avg": {
+        "precision": 0.9973429951690822,
+        "recall": 0.9973333333333333,
+        "f1-score": 0.9973290530085394,
+        "support": 750.0
+      }
+    }
+  },
+  "teste": {
+    "accuracy": 0.9973333333333333,
+    "precision": 1.0,
+    "recall": 0.9899497487437185,
+    "f1": 0.9949494949494949,
+    "confusion_matrix": [
+      [
+        551,
+        0
+      ],
+      [
+        2,
+        197
+      ]
+    ],
+    "report": {
+      "0": {
+        "precision": 0.9963833634719711,
+        "recall": 1.0,
+        "f1-score": 0.9981884057971014,
+        "support": 551.0
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 0.9899497487437185,
+        "f1-score": 0.9949494949494949,
+        "support": 199.0
+      },
+      "accuracy": 0.9973333333333333,
+      "macro avg": {
+        "precision": 0.9981916817359855,
+        "recall": 0.9949748743718593,
+        "f1-score": 0.9965689503732982,
+        "support": 750.0
+      },
+      "weighted avg": {
+        "precision": 0.9973429776974081,
+        "recall": 0.9973333333333333,
+        "f1-score": 0.9973290147855366,
+        "support": 750.0
+      }
+    }
+  },
+  "limitacao": "Dados sintéticos; não representa desempenho clínico."
+}
