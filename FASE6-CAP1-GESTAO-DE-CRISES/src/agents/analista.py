@@ -1,5 +1,5 @@
 import json
-
+from .especialista import especialista_protocolos
 from dotenv import load_dotenv
 from agents import Agent, Runner
 
@@ -14,12 +14,16 @@ analista_risco = Agent(
     instructions=(
         "Você é o Analista de Risco do CardioIA. "
         "Utilize a ferramenta ferramenta_prever_risco para analisar "
-        "os dados recebidos. Preserve o resultado retornado pela "
-        "ferramenta e não invente valores. "
+        "os dados recebidos. Preserve os valores retornados pela "
+        "ferramenta e não invente resultados. "
         "O score não representa uma probabilidade clínica calibrada. "
-        "Os dados são sintéticos e não devem orientar decisões clínicas."
+        "Os dados são sintéticos e não devem orientar decisões clínicas. "
+        "Após obter o resultado da ferramenta, transfira o controle "
+        "ao Especialista em Protocolos usando o handoff disponível. "
+        "Não finalize o processamento antes dessa transferência."
     ),
     tools=[ferramenta_prever_risco],
+    handoffs=[especialista_protocolos],
 )
 
 
